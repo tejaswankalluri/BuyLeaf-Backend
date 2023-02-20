@@ -1,18 +1,33 @@
 package controller
 
 import (
+	"encoding/json"
 	"fiber-api/initializer"
 	"fiber-api/models"
+	"log"
+	"time"
+
 	"github.com/gofiber/fiber/v2"
 )
 
 func GetAllProducts(c *fiber.Ctx) error {
 	var products []models.Product
+
 	//err := initializer.DB.Find(&products).Association("product_col")
 	err := initializer.DB.Preload("Category").Preload("ProductImages").Order("product_name").Find(&products).Error
 	if err != nil {
 		return c.Status(fiber.StatusNotFound).JSON(err)
 	}
+
+	// caching with redis
+	redisproducts, _ := json.Marshal(products)
+
+	rediserr := initializer.RedisClient.Set(c.Path(), redisproducts, 10*time.Second).Err()
+	if rediserr != nil {
+		log.Fatal(rediserr)
+		return c.Status(fiber.StatusNotFound).JSON(fiber.Map{"message": "Cacheing error"})
+	}
+
 	return c.JSON(products)
 }
 
