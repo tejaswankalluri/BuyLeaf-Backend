@@ -1,0 +1,15 @@
+_id: env_env_ac1697b75889fe92427a2c16ca2e85d9014c4396_sub__472fd8f1
+type: Environment
+parentId: env_ac1697b75889fe92427a2c16ca2e85d9014c4396
+modified: 1677855679326
+created: 1677855679326
+name: OpenAPI env linkit-backend.tejaswan.codes
+data:
+  scheme: http
+  base_path: /api
+  host: linkit-backend.tejaswan.codes
+  bearerToken: bearerToken
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1677855679327

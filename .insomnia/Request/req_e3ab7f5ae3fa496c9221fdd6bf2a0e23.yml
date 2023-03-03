@@ -1,0 +1,29 @@
+_id: req_e3ab7f5ae3fa496c9221fdd6bf2a0e23
+type: Request
+parentId: fld_f440a8c5049c4caf917dc7c9fd81b461
+modified: 1670912050868
+created: 1670819659588
+url: "{{ _.base_url }}/category"
+name: create a category
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Books",
+    	"desc": "Reading books"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138925
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

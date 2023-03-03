@@ -1,0 +1,29 @@
+_id: req_22c1554754a043d89d128fa105ae3f93
+type: Request
+parentId: fld_f440a8c5049c4caf917dc7c9fd81b461
+modified: 1670823102842
+created: 1670819659595
+url: "{{ _.base_url }}/category"
+name: update a category
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"desc": "This is a books section",
+    	"ID" : 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138900
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

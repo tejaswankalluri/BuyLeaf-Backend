@@ -1,0 +1,21 @@
+_id: req_3aff0415b3984555882971a4e6395d3c
+type: Request
+parentId: fld_3a27dbcbe6294504a30f87b1b2b3ab18
+modified: 1670820571196
+created: 1670820557622
+url: "{{ _.base_url }}/category?id=2"
+name: delete a inventory
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1670413138912.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

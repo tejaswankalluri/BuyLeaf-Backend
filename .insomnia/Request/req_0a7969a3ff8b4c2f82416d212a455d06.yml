@@ -1,0 +1,31 @@
+_id: req_0a7969a3ff8b4c2f82416d212a455d06
+type: Request
+parentId: fld_c98eb3c96b3d487bb672406fc6c94f96
+modified: 1670948262224
+created: 1670434903635
+url: "{{ _.base_url }}/product"
+name: update a product
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"product_name": "c language",
+    	"product_desc": "this is c language",
+    	"product_price": 800,
+    	"ID" : 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138900
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

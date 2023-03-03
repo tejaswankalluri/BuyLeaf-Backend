@@ -1,0 +1,30 @@
+_id: req_4e21a57c60384c14b8c54ce4ad683c80
+type: Request
+parentId: fld_65b1cace31a045818cbef50589d7bc83
+modified: 1671038751119
+created: 1656064538816
+url: http://localhost:8000/signin
+name: Signin
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email": "joh@email.com",
+    	"password": "Tejaswan@123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_31a2fac89f024435a3069dcb55737ba2
+authentication: {}
+metaSortKey: -1670235076019
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
