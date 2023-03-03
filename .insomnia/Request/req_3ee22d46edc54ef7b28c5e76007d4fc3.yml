@@ -1,0 +1,21 @@
+_id: req_3ee22d46edc54ef7b28c5e76007d4fc3
+type: Request
+parentId: fld_3a27dbcbe6294504a30f87b1b2b3ab18
+modified: 1670823379402
+created: 1670820557607
+url: "    {{ _.base_url }}/productsinventory"
+name: Get all inventory
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1670413138875
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

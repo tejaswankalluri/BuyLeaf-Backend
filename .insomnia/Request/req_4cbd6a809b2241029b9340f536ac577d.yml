@@ -1,0 +1,29 @@
+_id: req_4cbd6a809b2241029b9340f536ac577d
+type: Request
+parentId: fld_3a27dbcbe6294504a30f87b1b2b3ab18
+modified: 1670827628705
+created: 1670820557611
+url: "{{ _.base_url }}/productinventory"
+name: create a inventory
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"quantity": 400,
+    	"product_id": 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138925
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_2b31ef942feb430abe7e57a6a1897316
+type: Request
+parentId: fld_65b1cace31a045818cbef50589d7bc83
+modified: 1670951244894
+created: 1670222044838
+url: http://localhost:8000/signup
+name: Signup
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"username": "John",
+    	"email": "joh@email.com",
+    	"password": "Tejaswan@123"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670235076119
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

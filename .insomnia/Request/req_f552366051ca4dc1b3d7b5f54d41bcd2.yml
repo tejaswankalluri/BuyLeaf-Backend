@@ -1,0 +1,21 @@
+_id: req_f552366051ca4dc1b3d7b5f54d41bcd2
+type: Request
+parentId: fld_f440a8c5049c4caf917dc7c9fd81b461
+modified: 1670820529882
+created: 1670819659600
+url: "{{ _.base_url }}/category?id=2"
+name: delete a category
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1670413138912.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

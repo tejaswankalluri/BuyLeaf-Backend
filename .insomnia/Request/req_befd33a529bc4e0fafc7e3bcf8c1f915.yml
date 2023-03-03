@@ -1,0 +1,30 @@
+_id: req_befd33a529bc4e0fafc7e3bcf8c1f915
+type: Request
+parentId: fld_3a27dbcbe6294504a30f87b1b2b3ab18
+modified: 1670824240386
+created: 1670820557619
+url: "{{ _.base_url }}/category"
+name: update a inventory
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "c language",
+    	"desc": "All C language books will we available in this section",
+    	"ID" : 1
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138900
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,10 @@
+_id: fld_3a27dbcbe6294504a30f87b1b2b3ab18
+type: RequestGroup
+parentId: wrk_4cd88c9e2f3b40878a7abb2a537aa0a2
+modified: 1670820557604
+created: 1670820557604
+name: Product Inventory
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1666538574003.25

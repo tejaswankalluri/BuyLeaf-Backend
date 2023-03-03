@@ -1,0 +1,31 @@
+_id: req_dbc3144fda3a4c6aa7efd630da1b214c
+type: Request
+parentId: fld_73094209770f478cb3123e5bc9d14a3e
+modified: 1671038755619
+created: 1670956004614
+url: "{{ _.base_url }}/uploadimage?id=1"
+name: upload image
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - id: pair_df7d330e93a64c5a87e14d619f7784e8
+      name: image
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\Tejas\Downloads\first open source contrib.png
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+authentication: {}
+metaSortKey: -1670956004614
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

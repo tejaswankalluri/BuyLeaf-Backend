@@ -1,0 +1,34 @@
+_id: req_42c76c9b398843e88d352d8135f52192
+type: Request
+parentId: fld_c98eb3c96b3d487bb672406fc6c94f96
+modified: 1673111397018
+created: 1670422506779
+url: "{{ _.base_url }}/product"
+name: create a product
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"product_name": "C language",
+    	"product_desc": "this is c language",
+    	"product_price": 300,
+    	"category_id": 1,
+    	"inventory": {
+    		"quantity": 30
+    	}
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1670413138925
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
