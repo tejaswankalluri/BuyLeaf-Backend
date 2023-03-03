@@ -4,6 +4,7 @@ import (
 	"buyleaf/initializer"
 	"buyleaf/models"
 	"encoding/json"
+	"log"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -14,9 +15,9 @@ func VerifyCache(c *fiber.Ctx) error {
 	if err != nil {
 		return c.Next()
 	}
-	var dat []models.Product
-	if err := json.Unmarshal(val, &dat); err != nil {
-		panic(err)
+	var cachedProducts []models.Product
+	if err := json.Unmarshal(val, &cachedProducts); err != nil {
+		log.Println(err)
 	}
-	return c.JSON(dat)
+	return c.JSON(cachedProducts)
 }
