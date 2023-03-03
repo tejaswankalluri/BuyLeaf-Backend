@@ -1,12 +1,13 @@
 package middleware
 
 import (
-	"fiber-api/initializer"
-	"fiber-api/models"
-	"fiber-api/service"
-	"fiber-api/util"
-	"github.com/gofiber/fiber/v2"
+	"buyleaf/initializer"
+	"buyleaf/models"
+	"buyleaf/service"
+	"buyleaf/util"
 	"net/http"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 func AuthAdmin(c *fiber.Ctx) error {

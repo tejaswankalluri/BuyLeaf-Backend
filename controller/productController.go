@@ -1,9 +1,9 @@
 package controller
 
 import (
+	"buyleaf/initializer"
+	"buyleaf/models"
 	"encoding/json"
-	"fiber-api/initializer"
-	"fiber-api/models"
 	"log"
 	"time"
 

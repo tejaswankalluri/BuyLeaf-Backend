@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fiber-api/initializer"
-	"fiber-api/routes"
-	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/gofiber/fiber/v2/middleware/monitor"
+	"buyleaf/initializer"
+	"buyleaf/routes"
 	"log"
 	"os"
+
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/monitor"
 
 	"github.com/gofiber/fiber/v2"
 )

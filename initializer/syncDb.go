@@ -1,7 +1,7 @@
 package initializer
 
 import (
-	"fiber-api/models"
+	"buyleaf/models"
 	"gorm.io/gorm"
 	"log"
 )

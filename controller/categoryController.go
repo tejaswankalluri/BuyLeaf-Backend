@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"fiber-api/initializer"
-	"fiber-api/models"
+	"buyleaf/initializer"
+	"buyleaf/models"
 	"github.com/gofiber/fiber/v2"
 )
 

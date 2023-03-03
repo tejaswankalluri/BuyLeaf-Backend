@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"fiber-api/initializer"
-	"fiber-api/models"
+	"buyleaf/initializer"
+	"buyleaf/models"
 	"github.com/cloudinary/cloudinary-go/v2/api/uploader"
 	"github.com/gofiber/fiber/v2"
 	"regexp"

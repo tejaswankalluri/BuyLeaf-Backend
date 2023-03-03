@@ -1,9 +1,9 @@
 package middleware
 
 import (
+	"buyleaf/initializer"
+	"buyleaf/models"
 	"encoding/json"
-	"fiber-api/initializer"
-	"fiber-api/models"
 
 	"github.com/gofiber/fiber/v2"
 )

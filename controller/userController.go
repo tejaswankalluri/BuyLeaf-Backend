@@ -1,19 +1,20 @@
 package controller
 
 import (
-	"fiber-api/config"
-	"fiber-api/initializer"
-	"fiber-api/models"
-	"fiber-api/service"
-	"fiber-api/util"
-	"fiber-api/validator"
-	"github.com/gofiber/fiber/v2"
-	"golang.org/x/crypto/bcrypt"
-	"gorm.io/gorm"
+	"buyleaf/config"
+	"buyleaf/initializer"
+	"buyleaf/models"
+	"buyleaf/service"
+	"buyleaf/util"
+	"buyleaf/validator"
 	"net/http"
 	"os"
 	"strconv"
 	"time"
+
+	"github.com/gofiber/fiber/v2"
+	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
 )
 
 func RegisterUser(c *fiber.Ctx) error {

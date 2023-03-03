@@ -1,8 +1,8 @@
 package initializer
 
 import (
+	"buyleaf/config"
 	"context"
-	"fiber-api/config"
 	"github.com/cloudinary/cloudinary-go/v2"
 	"log"
 )

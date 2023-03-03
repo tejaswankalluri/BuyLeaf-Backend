@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"fiber-api/initializer"
-	"fiber-api/models"
-	"fiber-api/validator"
+	"buyleaf/initializer"
+	"buyleaf/models"
+	"buyleaf/validator"
 	"net/http"
 	"strconv"
 

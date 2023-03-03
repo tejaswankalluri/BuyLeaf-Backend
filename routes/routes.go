@@ -1,10 +1,11 @@
 package routes
 
 import (
-	"fiber-api/controller"
-	"fiber-api/middleware"
-
+	"buyleaf/controller"
+	"buyleaf/middleware"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/limiter"
+	"time"
 )
 
 func Routes(app *fiber.App) {
@@ -19,15 +20,15 @@ func Routes(app *fiber.App) {
 	app.Delete("/book", controller.DeleteBooks)
 
 	// limter
-	// app.Use(limiter.New(limiter.Config{
-	// 	Max:        5,
-	// 	Expiration: 10 * time.Second,
-	// 	LimitReached: func(c *fiber.Ctx) error {
-	// 		return c.Status(fiber.StatusTooManyRequests).JSON(fiber.Map{
-	// 			"message": "To many request plz try later",
-	// 		})
-	// 	},
-	// }))
+	app.Use(limiter.New(limiter.Config{
+		Max:        5,
+		Expiration: 10 * time.Second,
+		LimitReached: func(c *fiber.Ctx) error {
+			return c.Status(fiber.StatusTooManyRequests).JSON(fiber.Map{
+				"message": "To many request plz try later",
+			})
+		},
+	}))
 
 	//	user
 	app.Post("/signup", controller.RegisterUser)

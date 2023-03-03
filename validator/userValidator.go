@@ -1,8 +1,6 @@
 package validator
 
-import (
-	"fiber-api/models"
-)
+import "buyleaf/models"
 
 func ValidateUser(user models.User) []*ErrorResponse {
 	err := GenValidate(user)
