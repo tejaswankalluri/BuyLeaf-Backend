@@ -10,6 +10,15 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// GetBooks docs
+//
+//	@Summary		Get Books
+//	@Description	Get List of Books
+//	@Tags			books
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{array}	models.Book
+//	@Router			/books [get]
 func GetBooks(c *fiber.Ctx) error {
 	var Books []models.Book
 	initializer.DB.Find(&Books)

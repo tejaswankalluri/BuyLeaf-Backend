@@ -10,6 +10,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// GetAllProducts docs
+//	@Summary		List Products
+//	@Description	Get List of Products
+//	@Tags			Products
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{array}	models.Product
+//	@Router			/products [get]
 func GetAllProducts(c *fiber.Ctx) error {
 	var products []models.Product
 
@@ -31,6 +39,15 @@ func GetAllProducts(c *fiber.Ctx) error {
 	return c.JSON(products)
 }
 
+// GetProduct docs
+//	@Summary		Get Product
+//	@Description	Get Product with id
+//	@Tags			Products
+//	@Accept			json
+//	@Produce		json
+//	@Param			id	query		integer	true	"product id"
+//	@Success		200	{object}	models.Product
+//	@Router			/product [get]
 func GetProduct(c *fiber.Ctx) error {
 	id := c.Query("id")
 	if id == "" {

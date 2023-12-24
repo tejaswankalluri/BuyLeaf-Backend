@@ -3,9 +3,10 @@ package routes
 import (
 	"buyleaf/controller"
 	"buyleaf/middleware"
+	"time"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/limiter"
-	"time"
 )
 
 func Routes(app *fiber.App) {
@@ -21,7 +22,7 @@ func Routes(app *fiber.App) {
 
 	// limter
 	app.Use(limiter.New(limiter.Config{
-		Max:        5,
+		Max:        20,
 		Expiration: 10 * time.Second,
 		LimitReached: func(c *fiber.Ctx) error {
 			return c.Status(fiber.StatusTooManyRequests).JSON(fiber.Map{
