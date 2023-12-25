@@ -34,11 +34,14 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         user.setPassword(passwordEncoder.encode(signUpRequest.getPassword()));
         return userRepository.save(user);
     }
-    public JwtAuthenticationResponse signin(SigninRequest signinRequest){
-       authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signinRequest.getEmail(), signinRequest.getPassword()));
-       var user = userRepository.findByEmail(signinRequest.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid Email or Password"));
+
+    public JwtAuthenticationResponse signin(SigninRequest signinRequest) {
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(signinRequest.getEmail(), signinRequest.getPassword()));
+        var user = userRepository.findByEmail(signinRequest.getEmail())
+                .orElseThrow(() -> new IllegalArgumentException("Invalid Email or Password"));
         var jwt = jwtService.generateToken(user);
-        var refreshToken = jwtService.generateRefreshToken(new HashMap<>(),user);
+        var refreshToken = jwtService.generateRefreshToken(new HashMap<>(), user);
 
         JwtAuthenticationResponse jwtAuthenticationResponse = new JwtAuthenticationResponse();
 
@@ -47,12 +50,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         return jwtAuthenticationResponse;
     }
-    public JwtAuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest){
+
+    public JwtAuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
         String userEmail = jwtService.extractUserName(refreshTokenRequest.getToken());
         UserEntity user = userRepository.findByEmail(userEmail).orElseThrow();
-        if(jwtService.isTokenValid(refreshTokenRequest.getToken(), user)){
+        if (jwtService.isTokenValid(refreshTokenRequest.getToken(), user)) {
             var jwt = jwtService.generateToken(user);
-            var refreshToken = jwtService.generateRefreshToken(new HashMap<>(),user);
+            var refreshToken = jwtService.generateRefreshToken(new HashMap<>(), user);
 
             JwtAuthenticationResponse jwtAuthenticationResponse = new JwtAuthenticationResponse();
 

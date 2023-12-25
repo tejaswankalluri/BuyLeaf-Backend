@@ -1,9 +1,7 @@
 package me.tejaswan.buyleaf.service;
 
-import me.tejaswan.buyleaf.entity.UserEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public interface JWTService {
