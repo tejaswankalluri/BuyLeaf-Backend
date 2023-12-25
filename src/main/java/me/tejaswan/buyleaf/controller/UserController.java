@@ -2,6 +2,7 @@ package me.tejaswan.buyleaf.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.tejaswan.buyleaf.entity.UserEntity;
+import me.tejaswan.buyleaf.exception.ResourceNotFoundException;
 import me.tejaswan.buyleaf.repository.UserRepository;
 
 import java.util.Optional;
@@ -22,10 +23,12 @@ public class UserController {
     private final UserRepository userRepository;
 
     @GetMapping
-    public ResponseEntity<String> sayHello(HttpServletRequest request) {
-        // String userEmail = (String) request.getAttribute("userEmail");
-        // Optional<UserEntity> user = userRepository.findByEmail(userEmail);
-        // return ResponseEntity.ok(user.get());
-        return ResponseEntity.ok("hey");
+    public ResponseEntity<UserEntity> sayHello(HttpServletRequest request) throws ResourceNotFoundException {
+         String userEmail = (String) request.getAttribute("userEmail");
+         Optional<UserEntity> user = userRepository.findByEmail(userEmail);
+         if(user.isEmpty()){
+             throw new ResourceNotFoundException("User Not Found");
+         }
+         return ResponseEntity.ok(user.get());
     }
 }
