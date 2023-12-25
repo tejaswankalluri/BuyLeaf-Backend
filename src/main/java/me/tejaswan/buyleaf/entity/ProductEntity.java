@@ -28,6 +28,7 @@ public class ProductEntity {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<ProductImage> images = new ArrayList<>();
 
     @ManyToMany()

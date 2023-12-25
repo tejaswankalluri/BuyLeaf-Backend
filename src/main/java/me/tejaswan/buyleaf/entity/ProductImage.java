@@ -1,5 +1,6 @@
 package me.tejaswan.buyleaf.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +18,6 @@ public class ProductImage{
 
     @ManyToOne
     @JoinColumn(name= "product_id")
+    @JsonBackReference
     private ProductEntity product;
 }
