@@ -1,5 +1,6 @@
 package me.tejaswan.buyleaf.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import me.tejaswan.buyleaf.entity.UserEntity;
 import me.tejaswan.buyleaf.exception.ResourceNotFoundException;
@@ -19,6 +20,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @SecurityRequirement(name = "jwtSchema")
 @RequestMapping("/api/v1/user")
 @RequiredArgsConstructor
+@Tag(name = "User", description = "User Apis")
 public class UserController {
     private final UserRepository userRepository;
 

@@ -1,6 +1,10 @@
 package me.tejaswan.buyleaf.controller;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.models.annotations.OpenAPI30;
 import lombok.AllArgsConstructor;
 import me.tejaswan.buyleaf.aws.s3.S3Service;
 import me.tejaswan.buyleaf.entity.ProductEntity;
@@ -20,6 +24,7 @@ import java.util.UUID;
 @RequestMapping("/api/v1/product")
 @SecurityRequirement(name = "jwtSchema")
 @AllArgsConstructor
+@Tag(name = "Products", description = "Product Apis")
 public class ProductController {
     private final ProductService productService;
 
