@@ -43,7 +43,6 @@ public class ProductServiceImpl implements ProductService {
             try {
                 byte[] byteFile = file.getBytes();
                 String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
-                System.out.println(fileName);
                 String URL = s3Service.putObjectAndGetURL("buyleaf", fileName, byteFile);
 
                 ProductImage image = new ProductImage();
