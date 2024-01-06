@@ -15,6 +15,13 @@ pipeline {
                 git branch: 'main', credentialsId: 'tejaswankalluri-gh', url: 'https://github.com/tejaswankalluri/BuyLeaf-Backend'
             }
         }
+        stage('Inject Secrets') {
+            steps {
+                withCredentials([file(credentialsId: 'spring-boot-env-file', variable: 'ENV_FILE')]) {
+                    sh 'cp $ENV_FILE src/main/resources/secrets.properties'
+                }
+            }
+        }
         stage("Build Application"){
             steps {
                 sh "mvn clean package"
