@@ -18,7 +18,7 @@ pipeline {
         stage('Inject Secrets') {
             steps {
                 withCredentials([file(credentialsId: 'spring-boot-env-file', variable: 'ENV_FILE')]) {
-                    sh 'cp $ENV_FILE src/main/resources/secrets.properties'
+                    sh 'cp $ENV_FILE src/main/resources/secret.properties'
                 }
             }
         }
