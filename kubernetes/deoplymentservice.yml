@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buyleaf-backend
+spec:
+  selector:
+    matchLabels:
+      app: buyleaf-backend
+  template:
+    metadata:
+      labels:
+        app: buyleaf-backend
+    spec:
+      containers:
+        - name: buyleaf-backend
+          image: techtoe/buyleaf-backend
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: buyleaf-backend-svc
+spec:
+  selector:
+    app: buyleaf-backend
+  ports:
+    - port: 8080
+      targetPort: 8080

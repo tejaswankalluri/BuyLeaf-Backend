@@ -32,6 +32,20 @@ pipeline {
                 sh "mvn test"
             }
         }
-
+        stage("Build Dockerfile"){
+            steps {
+                sh "docker build -t techtoe/buyleaf-backend ."
+            }
+        }
+        stage('Push image to Hub'){
+            steps {
+                script {
+                   withCredentials([string(credentialsId: 'techtoe-docker-pass', variable: 'dockerhubpwd')]) {
+                   sh 'docker login -u techtoe -p ${dockerhubpwd}'
+                }
+                   sh 'docker push techtoe/buyleaf-backend'
+                }
+            }
+        }
     }
 }
