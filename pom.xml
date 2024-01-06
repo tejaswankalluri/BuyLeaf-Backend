@@ -86,8 +86,13 @@
             <artifactId>s3</artifactId>
             <version>2.20.36</version>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.200</version> <!-- Replace with the latest version -->
+            <scope>test</scope> <!-- Use 'test' scope for H2 specifically for testing -->
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -96,5 +101,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
