@@ -12,7 +12,7 @@ pipeline {
         }
         stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/tejaswankalluri/BuyLeaf-Backend'
+                git branch: 'main', credentialsId: 'tejaswankalluri-gh', url: 'https://github.com/tejaswankalluri/BuyLeaf-Backend'
             }
         }
     }
