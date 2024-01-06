@@ -1,12 +1,8 @@
 package me.tejaswan.buyleaf.controller;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.models.annotations.OpenAPI30;
 import lombok.AllArgsConstructor;
-import me.tejaswan.buyleaf.aws.s3.S3Service;
 import me.tejaswan.buyleaf.entity.ProductEntity;
 import me.tejaswan.buyleaf.exception.ResourceNotFoundException;
 import me.tejaswan.buyleaf.service.ProductService;
@@ -16,7 +12,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
